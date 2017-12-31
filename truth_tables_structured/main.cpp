@@ -84,6 +84,30 @@ int main()
             cout<<boolalpha<<arr_p[i]<<" XOR "<<arr_q[i]<<" = "<<arr_res[i]<<endl;
 
         }//fin for
+        
+        //this xor is simpler and only has to subtract
+         cout<<"\nxor usig subtraction"<<endl;
+
+        for(int i=0; i<4; i++){
+            arr_res[i] = arr_p[i] - arr_q[i];
+
+            cout<<arr_p[i]<<" xor "<<arr_q[i]<<" = "<<arr_res[i]<<endl;
+
+        }//fin for
+
+        cout<<"\nxor with comparisons"<<endl;
+        for(int i=0; i<4; i++){
+
+            if(arr_p[i] != arr_q[i]){
+
+                cout<<arr_p[i]<<" xor "<<arr_q[i]<<" true "<<endl;
+            }else{
+
+                cout<<arr_p[i]<<" xor "<<arr_q[i]<<" flase "<<endl;
+            }//fin if
+
+        }//fin for
+
 
 
  /* si y solo si
@@ -109,6 +133,15 @@ exclusivo o
                 f           f                       f                       v
                 f           v                       v                       f
 
+xor
+
+                bool
+
+                1 - 1 = 0       v - v = f
+                1 - 0 = 1       v - f = v
+                0 - 1 = -1      f - v = v   in this case any value different from 0 is true
+                0 - 0 = 0       f - f = f
+*/
 
 
 */
