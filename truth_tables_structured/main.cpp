@@ -25,7 +25,7 @@ int main()
 
         bool arr_res[4];
 
-         cout<<"\nConjuncion en logica ( o ) ( v )"<<endl;
+         cout<<"\nDisjuction ( or ) ( v )"<<endl;
 
         for(int i=0; i<4; i++){
 
@@ -33,9 +33,9 @@ int main()
 
             cout<<boolalpha<<arr_p[i]<<" v "<<arr_q[i]<<" = "<<arr_res[i]<<endl;
 
-        }//fin for
+        }//end for
 
-                cout<<"\nDisyuncion en logica ( y ) ( ^ )"<<endl;
+                cout<<"\nConjunction ( and ) ( ^ )"<<endl;
 
             for(int i=0; i<4; i++){
 
@@ -43,9 +43,9 @@ int main()
 
             cout<<boolalpha<<arr_p[i]<<" ^ "<<arr_q[i]<<" = "<<arr_res[i]<<endl;
 
-        }//fin for
+        }//end for
 
-         cout<<"\nCondicional si y solo si (<-->)"<<endl;
+         cout<<"\nBiconditional if and only if (<-->)"<<endl;
 
         for (int i=0; i<4; i++){
 
@@ -59,17 +59,17 @@ int main()
 
             cout<<boolalpha<<arr_p[i]<<" <--> "<<arr_q[i]<<" = "<<arr_res[i]<<endl;
 
-        }//fin for
+        }//end for
 
-        cout<<"\nSi ... entonces (-->) "<<endl;
+        cout<<"\nConditional (-->) "<<endl;
 
         for(int i=0; i<4; i++){
             arr_res[i] = !(arr_p[i] * !arr_q[i]);
 
             cout<<arr_p[i]<<" --> "<<arr_q[i]<<" = "<<arr_res[i]<<endl;
-        }//fin for
+        }//end for
 
-         cout<<"\nExclusivo o (XOR)"<<endl;
+         cout<<"\nExclusive or (XOR)"<<endl;
 
         for (int i=0; i<4; i++){
 
@@ -83,7 +83,7 @@ int main()
 
             cout<<boolalpha<<arr_p[i]<<" XOR "<<arr_q[i]<<" = "<<arr_res[i]<<endl;
 
-        }//fin for
+        }//end for
         
         //this xor is simpler and only has to subtract
          cout<<"\nxor usig subtraction"<<endl;
@@ -93,7 +93,7 @@ int main()
 
             cout<<arr_p[i]<<" xor "<<arr_q[i]<<" = "<<arr_res[i]<<endl;
 
-        }//fin for
+        }//end for
 
         cout<<"\nxor with comparisons"<<endl;
         for(int i=0; i<4; i++){
@@ -104,34 +104,34 @@ int main()
             }else{
 
                 cout<<arr_p[i]<<" xor "<<arr_q[i]<<" flase "<<endl;
-            }//fin if
+            }//end if
 
-        }//fin for
+        }//end for
 
 
 
- /* si y solo si
-        p y q       -p y -q        ( (pyq)  o  (-py-q) )
+ /* if and only if
+        p and q       -p and -q        ( (p and q)  or  (-p and -q) )
         v           f                       v
         f           f                       f
         f           f                       f
         f           v                       v
 
-si... entonces
+Conditional
 
-        p  y  -q      -(p y-q)
+        p  and  -q      -(p and -q)
         v  f  f       v  v  f f
         v  v  v       f  v  v v
         f  f  f       v  f  f f
         f  f  v       v  f  f v
 
-exclusivo o
+exclusive or
 
-                p y q       -p y -q        ( (pyq)  o  (-py-q) )    -( (pyq)  o  (-py-q) )
-                v           f                       v                       f
-                f           f                       f                       v
-                f           f                       f                       v
-                f           v                       v                       f
+                p and q       -p and -q        ( (p and q)  or  (-p and-q) )    -( (p and q)  or  (-p and -q) )
+                v           f                       v                              f
+                f           f                       f                              v
+                f           f                       f                              v
+                f           v                       v                              f
 
 xor
 
